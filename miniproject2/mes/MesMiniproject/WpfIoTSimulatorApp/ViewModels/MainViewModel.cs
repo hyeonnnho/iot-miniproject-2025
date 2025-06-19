@@ -126,7 +126,7 @@ namespace WpfIoTSimulatorApp.ViewModels
         public void Check()
         {
             StartSensorCheckRequested?.Invoke();
-
+            
             // 양품불량품 판단
             Random rand = new();
             int result = rand.Next(1, 3); // 1 ~ 2
@@ -143,7 +143,7 @@ namespace WpfIoTSimulatorApp.ViewModels
                 default:
                     ProductBrush = Brushes.Aqua;
                     break;
-            } // 아래의 람다 switch와 완전동일 기능  */
+            } // 아래의 람다 switch와 완전동일 기능  */ 
             ProductBrush = result switch
             {
                 1 => Brushes.Green, // 양품
@@ -159,6 +159,7 @@ namespace WpfIoTSimulatorApp.ViewModels
                 Timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
                 Result = resultText,
             };
+            // 일반 객체 데이터를 json으로 변경 -> 직렬화(Serialization).
             var jsonPayload = JsonConvert.SerializeObject(payload, Formatting.Indented);
             var message = new MqttApplicationMessageBuilder()
                                 .WithTopic(mqttTopic)
