@@ -139,8 +139,10 @@ https://github.com/user-attachments/assets/24c8a58c-7ca7-42b5-9797-5a5bd4a7786d
     - 공정계획 순번으로 DB조회
     - Start버튼 눌러서 IoT Simulator 동작시키고 동기화
     - 체크이후 성공/실패 결과 DB에 저장, 실시간 시각화
-
     
+
+https://github.com/user-attachments/assets/8bb95588-ed10-4198-9714-9a80f3f09231
+
 
 ##### 추후 작업(MiniProject 3)
 1. ReportView, ReportViewModel LiveChart 작업
